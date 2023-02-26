@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container-fluid">
     <div v-if="product" class="container py-5">
       <div class="hero-container">
         <div class="hero__img rounded-lg overflow-hidden">
@@ -9,7 +9,7 @@
             class="image"
           >
         </div>
-        <div class="info-box p-4 rounded-lg">
+        <div class="info-box p-3 lg-p-4 rounded-lg">
           <h1>{{ product.title }}</h1>
           <p class="snippet">
             {{ product.subtitle }}
@@ -128,10 +128,97 @@ button {
   transition: 0.5s;
 }
 .description-container {
-  margin-top: 3rem;
+  padding: 3rem 0;
   color: grey;
+}
+.description-container p {
+  margin: 0;
 }
 .empty {
   padding: 10rem 0;
+}
+
+/* media queries */
+@media (max-width: 991px) {
+  .container-fluid {
+    padding: 0 40px;
+  }
+  .container {
+    max-width: 100% !important;
+    padding: 0;
+  }
+  .hero-container {
+    gap: 20px;
+  }
+  .hero__img {
+    width: 55%;
+  }
+  .info-box {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 calc(40 * 100% / 768);
+  }
+  .hero__img {
+    width: 53%;
+    height: 20rem;
+  }
+  .info-box h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .hero-container {
+    flex-wrap: wrap;
+  }
+  .hero__img {
+    width: 100%;
+  }
+  .info-box {
+    width: 100%;
+  }
+  .info-box h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .description-container {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 432px) {
+  .hero__img {
+    height: 15rem;
+  }
+  .info-box h1 {
+    font-size: 20px;
+  }
+  .included-container:not(:first-child) {
+    margin: 1rem 0 0;
+  }
+  h6 {
+    margin: 0 0 5px;
+  }
+  p {
+    line-height: 20px;
+  }
+  .description-container {
+    padding: 1.5rem 0;
+  }
+}
+@media (max-width: 375px) {
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .description-container {
+    padding: 1rem 0;
+  }
 }
 </style>

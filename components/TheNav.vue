@@ -5,9 +5,9 @@
     type="dark"
     variant="info"
   >
-    <b-navbar-brend class="navbar-brand text-white" href="/">
+    <NuxtLink class="navbar-brand text-white" to="/">
       Noo-fire
-    </b-navbar-brend>
+    </NuxtLink>
     <b-navbar-toggle target="nav-collapse" />
 
     <b-collapse id="nav-collapse" is-nav>

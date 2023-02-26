@@ -88,4 +88,12 @@ p {
 .btn-order {
   margin: 2rem 0 0;
 }
+
+/* media queries */
+@media (max-width: 480px) {
+  .calendar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>

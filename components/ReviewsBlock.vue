@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h3 class="title">
+  <div class="reviews">
+    <h3 class="reviews__title">
       Customer Reviews
     </h3>
     <div v-if="!$fetchState.pending">
@@ -31,4 +31,16 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+  .reviews__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 432px) {
+  .reviews__title {
+    font-size: 20px;
+  }
+}
+</style>

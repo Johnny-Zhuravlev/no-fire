@@ -27,7 +27,7 @@ export default {
 .card-fe {
   width: 24%;
   height: 12.5rem;
-  margin: 0 0 1rem;
+  margin: 0 0 .8rem;
 }
 .card-fe img {
   width: 100%;
@@ -49,7 +49,6 @@ export default {
 @media (max-width: 568px) {
   .card-fe {
     width: 48.5%;
-    height: auto;
     margin: 0 0 .75rem;
   }
 }
