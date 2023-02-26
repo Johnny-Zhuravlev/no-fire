@@ -1,38 +1,33 @@
 <template>
-  <nav class="navbar navbar-expand-lg padding bg-dark">
-    <NuxtLink class="navbar-brand text-white" to="/">
+  <b-navbar
+    class="navbar navbar-expand-lg padding bg-dark"
+    toggleable="lg"
+    type="dark"
+    variant="info"
+  >
+    <b-navbar-brend class="navbar-brand text-white" href="/">
       Noo-fire
-    </NuxtLink>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon" />
-    </button>
+    </b-navbar-brend>
+    <b-navbar-toggle target="nav-collapse" />
 
-    <div id="navbarSupportedContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav class="navbar-nav ml-auto">
+        <b-nav-item class="nav-item active">
           <NuxtLink
             class="nav-link"
             to="/products"
           >
             Products <span class="sr-only">(current)</span>
           </NuxtLink>
-        </li>
-        <li class="nav-item">
+        </b-nav-item>
+        <b-nav-item class="nav-item">
           <NuxtLink class="nav-link" to="/my-items">
             My Items
           </NuxtLink>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        </b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <script>
